@@ -44,11 +44,11 @@ def makeWebhookResult(req):
     #cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
     cost = {'interna junior':150, 'interna senior':250, 'esterna junior':180, 'esterna senior':210}
 
-    contexts = json.load(result.get("contexts"))
+    contexts = result["contexts"]
     user = ""
     for context in contexts:
-        lista_par  = context['parameters']
-        for p in lista_par:
+        parameters = context['parameters']
+        for p in parameters:
             if p == "utente.original"
                 user = lista_par[p]
 
