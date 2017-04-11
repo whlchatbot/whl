@@ -29,7 +29,11 @@ def webhook():
 
 def makeWebhookResult(req):
     if req.get("result").get("action") != "shipping.cost":
-        return {}
+        return {
+            "speech": "no action",
+            "displayText": "no action",
+            "source": "apiai-onlinestore-shipping"
+        }
     result = req.get("result")
     parameters = result.get("parameters")
     zone = parameters.get("shipping-zone")
