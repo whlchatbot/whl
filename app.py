@@ -28,7 +28,7 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "shipping.cost":
+    if req.get("result").get("action") != "costo.risorsa":
         return {
             "speech": "no action",
             "displayText": "no action",
@@ -36,11 +36,16 @@ def makeWebhookResult(req):
         }
     result = req.get("result")
     parameters = result.get("parameters")
-    zone = parameters.get("shipping-zone")
+    #zone = parameters.get("shipping-zone")
+    esperienza = parameters.get("esperienza_fra")
+    provenienza = parameters.get("provenienza_fra")
+    risorsa = provenienza + " " + esperienza
 
-    cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
+    #cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
+    cost = {'interna junior':150, 'interna senior':250, 'esterna junior':180, 'esterna senior':210}
 
-    speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    speech = "Il costo di una risorsa " + risorsa + " is " + str(cost[risorsa]) + "€."
 
     print("Response:")
     print(speech)
