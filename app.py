@@ -54,7 +54,6 @@ def makeWebhookResult(req):
             if p == "utente.original"
                 user = lista_par[p]
 
-
     #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
     speech = "Ciao " + user + ", il costo di una risorsa " + risorsa + " is " + str(cost[risorsa]) + " euro."
 
