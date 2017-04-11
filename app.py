@@ -44,18 +44,8 @@ def makeWebhookResult(req):
     #cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
     cost = {'interna junior':150, 'interna senior':250, 'esterna junior':180, 'esterna senior':210}
 
-    contexts = result.get("contexts")
-    user = ""
-    length = range(len(contexts))
-    for i in length:
-        context = contexts[i]
-        lista_par  = context['parameters']
-        for p in lista_par:
-            if p == "utente.original"
-                user = lista_par[p]
-
     #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
-    speech = "Ciao " + user + ", il costo di una risorsa " + risorsa + " is " + str(cost[risorsa]) + " euro."
+    speech = "Il costo di una risorsa " + risorsa + " is " + str(cost[risorsa]) + " euro."
 
     print("Response:")
     print(speech)
