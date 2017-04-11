@@ -53,7 +53,7 @@ def makeWebhookResult(req):
                 user = parameters.get("utente.original")
 
     #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
-    speech = "Ciao " + user + ", il costo di una risorsa " + risorsa + " is " + str(cost[risorsa]) + " euro."
+    speech = "Ciao " + user + ", il costo di una risorsa " + risorsa + " è " + str(cost[risorsa]) + " euro."
 
     print("Response:")
     print(speech)
