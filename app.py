@@ -49,8 +49,8 @@ def quantitarisorsa(req):
     result = req.get("result")
     parameters = result.get("parameters")
     #zone = parameters.get("shipping-zone")
-    esperienza = parameters.get("esperienza")
-    provenienza = parameters.get("provenienza")
+    esperienza = parameters.get("esperienza_fra")
+    provenienza = parameters.get("provenienza_fra")
     risorsa = provenienza + " " + esperienza
     print("Response:")
     print(esperienza+" "+risorsa)
@@ -66,7 +66,7 @@ def quantitarisorsa(req):
                 user = parameters.get("utente.original")
 
     #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
-    speech = "Ciao " + user + ", le risorse " + risorsa + " sono "+str(quantita[risorsa])
+    speech = user + " le risorse " + risorsa + " sono "+str(quantita[risorsa])
     print("Response:")
     print(speech)
 
@@ -81,8 +81,8 @@ def costorisorsa(req):
     result = req.get("result")
     parameters = result.get("parameters")
     #zone = parameters.get("shipping-zone")
-    esperienza = parameters.get("esperienza")
-    provenienza = parameters.get("provenienza")
+    esperienza = parameters.get("esperienza_fra")
+    provenienza = parameters.get("provenienza_fra")
     risorsa = provenienza + " " + esperienza
 
     #cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
@@ -97,7 +97,7 @@ def costorisorsa(req):
                 user = parameters.get("utente.original")
 
     #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
-    speech = "Ciao " + user + ", una risorsa " + risorsa + " costa " + str(cost[risorsa]) + " euro."
+    speech = user + " una risorsa " + risorsa + " costa " + str(cost[risorsa]) + " euro."
 
     print("Response:")
     print(speech)
