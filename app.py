@@ -30,7 +30,7 @@ def webhook():
 def makeWebhookResult(req):
     if req.get("result").get("action") == "costo.risorsa":
         costorisorsa(req)
-    else if req.get("result").get("action") == "quantita.risorsa":
+    elseif req.get("result").get("action") == "quantita.risorsa":
         res = quantitarisorsa(req)
     else:
         res =  {
