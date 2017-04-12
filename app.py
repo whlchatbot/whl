@@ -49,8 +49,8 @@ def quantitarisorsa(req):
     result = req.get("result")
     parameters = result.get("parameters")
     #zone = parameters.get("shipping-zone")
-    esperienza = parameters.get("esperienza_fra")
-    provenienza = parameters.get("provenienza_fra")
+    esperienza = parameters.get("esperienza")
+    provenienza = parameters.get("provenienza")
     risorsa = provenienza + " " + esperienza
     print("Response:")
     print(esperienza+" "+risorsa)
@@ -82,8 +82,8 @@ def costorisorsa(req):
     result = req.get("result")
     parameters = result.get("parameters")
     #zone = parameters.get("shipping-zone")
-    esperienza = parameters.get("esperienza_fra")
-    provenienza = parameters.get("provenienza_fra")
+    esperienza = parameters.get("esperienza")
+    provenienza = parameters.get("provenienza")
     risorsa = provenienza + " " + esperienza
 
     #cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
