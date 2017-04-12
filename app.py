@@ -28,16 +28,17 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") == "costo.risorsa":
-        costorisorsa(req)
-    elseif req.get("result").get("action") == "quantita.risorsa":
-        res = quantitarisorsa(req)
-    else:
-        res =  {
+    action = req.get("result").get("action")
+    res =  {
             "speech": "no action",
             "displayText": "no action",
             "source": "apiai-onlinestore-shipping"
         }
+    if (action == "costo.risorsa"):
+        res =  costorisorsa(req)
+    if (action == "quantita.risorsa"):
+        res = quantitarisorsa(req)
+    
     return res
     
     
