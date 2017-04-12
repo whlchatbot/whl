@@ -29,9 +29,9 @@ def webhook():
 
 def makeWebhookResult(req):
     if req.get("result").get("action") == "costo.risorsa":
-        quantitarisorsa(req)
+        costorisorsa(req)
     else if req.get("result").get("action") == "quantita.risorsa":
-        res = costorisorsa(req)
+        res = quantitarisorsa(req)
     else:
         res =  {
             "speech": "no action",
