@@ -34,7 +34,8 @@ def makeWebhookResult(req):
             "displayText": "no action",
             "source": "apiai-onlinestore-shipping"
         }
-    
+    print("Action:")
+    print(action)
     if (action == "costo.risorsa"):
         res =  costorisorsa(req)
         
