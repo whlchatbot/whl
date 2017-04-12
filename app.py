@@ -49,7 +49,8 @@ def quantitarisorsa(req):
     esperienza = parameters.get("esperienza_fra")
     provenienza = parameters.get("provenienza_fra")
     risorsa = provenienza + " " + esperienza
-
+    print("Response:")
+    print(esperienza+" "+risorsa)
     #cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
     quantita = {'interna junior':55, 'interna senior':22, 'esterna junior':33, 'esterna senior':11}
 
